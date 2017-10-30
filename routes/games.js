@@ -1,27 +1,31 @@
 var express = require("express");
 var router = express.Router();
 var session = require("express-session");
-
+var sess;
 /* GET users listing. */
 
 router.get("/", function(req, res) {
-	res.render("game/index");
+	res.render("game/index", {
+		player: req.session.player
+	});
 });
 
 router.post("/", function(req, res) {
-	var player = req.body.playerName;
+	console.log(req.session.player);
 	res.render("game/index", {
-		player: player
+		player: req.session.player
 	});
 });
 
 router.get("/numberGuesser", function(req, res, next) {
-	var sess = req.session;
-	if (sess.player === undefined) {
-		sess.player = "guest";
-	}
-	res.render("numberGuesser", {
-		player: sess.player
+	res.render("game/numberGuesser", {
+		player: req.session.player
+	});
+});
+
+router.post("/numberGuesser", function(req, res, next) {
+	res.render("game/numberGuesser", {
+		player: req.session.player
 	});
 });
 

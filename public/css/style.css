@@ -1,9 +1,13 @@
+body {
+	margin: 10px;
+}
+
 #currentGuess {
 	color: blue;
 	padding-bottom: 10%;
 }
 
-#guessesLeft {
+.guessesLeftNumber {
 	color: red;
 }
 
@@ -12,13 +16,26 @@
 }
 
 #playAgain {
-	margin: 10px;
+	margin-top: 20px;
 }
 
 .gameContainer {
 }
 
+.gameButtons {
+	margin: 10px;
+}
+
 .center {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.centerTop {
 	text-align: center;
 	width: 100%;
 	align-items: center;
@@ -30,4 +47,14 @@
 
 .player {
 	width: 20%;
+	position: absolute;
+}
+
+.backToGames {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	height: 40px;
+	width: 100%;
+	border-radius: 0;
 }

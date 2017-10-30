@@ -1,1 +1,31 @@
-Hello <%= player %>
+<% include ../partials/header %>
+
+<body>
+  <div id="playerWelcome" class="player">
+  <% if (player != undefined) { %>
+    <% console.log(player) %>
+      Welcome <%= player.name %>!
+    <form action="/signout" method="post">
+      <button type="submit" class="btn btn-primary button">Sign out</button>
+    </form>
+    <% } else { %>
+    <form action="/" >
+      <button type="submit" class="btn btn-primary button">Sign in</button>
+    </form>
+    <% } %>
+  </div>
+
+<div class="center">
+<div>
+  <h2>You can choose between these games:</h2>
+  <div class="gameButtons">
+    <form action="/games/numberguesser/" method="post">
+      <button type="submit" class="btn btn-primary button">Number Guesser</button>
+    </form>
+  </div>
+</div>
+
+
+
+  </div>
+</body>

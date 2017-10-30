@@ -4,20 +4,23 @@
 
   <body>
     <div class="center">
-    <p>
-      <h1>Welcome to Stephen's Number Games!</h1>
-      <h3>Like the Hunger Games, but less violent</h3>
-    </p>
-  </div>
+    <h1>Welcome to Stephen's Number Games!</h1>
+    <h3>Like the Hunger Games, but less violent</h3>
 
+    <% if(errors != undefined){ %>
+        <% errors.forEach(function(error){ %>
+        <p style="color: red"><%= error.msg %></p>
+        <% })%>
+    <% } %>
 
-    <div class="center signupForm">
-      <form method="POST" action="/games">
-        <input type="text" name="playerName" placeholder="Enter a name">
+    <div class="centerTop signupForm">
+      <form method="POST" action="/confirm-user">
+        <input type="text" name="name" placeholder="Enter a name">
         <br />
         <button type="submit" class="btn btn-primary button" style="margin: 10px" name="sign in"> <span> Sign in</span></button>
       </form>
     </div>
+  </div>
 
   </body>
 

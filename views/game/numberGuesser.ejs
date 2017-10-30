@@ -1,0 +1,53 @@
+<% include ../partials/header %>
+
+  <body>
+
+      <div id="playerWelcome" class="player">
+        <% if (player != undefined) { %>
+          Welcome
+          <%= player.name %>!
+            <form action="/signout" method="post">
+              <button type="submit" class="btn button">Sign out</button>
+            </form>
+            <% } else { %>
+              <form action="/">
+                <button type="submit" class="btn button">Sign in</button>
+              </form>
+              <% } %>
+      </div>
+
+
+      <div class="center">
+
+      <div id="gameContainer" class="gameContainer">
+        <h2>
+      I guess <span id="currentGuess"></span>
+    </h2>
+
+        <div id="guesses" class="guesses">
+          <span id="guessesLeft" class="guessesLeftNumber"></span> guesses left
+        </div>
+
+        <div>
+          <button id="guessLower" class="btn btn-warning">Lower!</button>
+          <button id="correctGuess" class="btn btn-success">You got it!</button>
+          <button id="guessHigher" class="btn btn-primary">Higher!</button>
+        </div>
+      </div>
+      <div id="endGame">
+        <span id="result"></span>
+      </div>
+      <button id="playAgain" class="btn btn-danger">Play again</button>
+    </div>
+
+    <form action="/games" method="post">
+      <button type="submit" class="btn btn-info button backToGames">Back to Games</button>
+    </form>
+
+
+
+
+    <script src="/js/numberGuesser.js"></script>
+    <script src="/js/bootstrap-without-jquery.min.js"></script>
+    <script src="/js/numGuesserJS.js"></script>
+  </body>
