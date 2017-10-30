@@ -1,7 +1,3 @@
-// var numberGuesser = require("./numberGuesser");
-
-var guessHigher = document.getElementById("guessHigher");
-
 function newGame() {
 	game = new NumberGuesser();
 }
@@ -24,13 +20,11 @@ guessLower.addEventListener("click", function() {
 
 correctGuess.addEventListener("click", function() {
 	result.innerHTML = "<h1> I win! </h1>";
-	endGame.style.display = "block";
-	gameContainer.style.display = "none";
+	hideGame();
 });
 
 playAgain.addEventListener("click", function() {
-	gameContainer.style.display = "block";
-	endGame.style.display = "none";
+	hideEndGame();
 	newGame();
 	setDefaults();
 });
@@ -38,9 +32,18 @@ playAgain.addEventListener("click", function() {
 function checkIfWinner() {
 	if (game.guessesLeft <= 0) {
 		result.innerHTML = "<h1>YOU WIN!</h1>";
-		endGame.style.display = "block";
-		gameContainer.style.display = "none";
+		hideGame();
 	}
+}
+
+function hideGame() {
+	endGame.style.display = "block";
+	gameContainer.style.display = "none";
+}
+
+function hideEndGame() {
+	gameContainer.style.display = "block";
+	endGame.style.display = "none";
 }
 
 function updateHTML() {
@@ -49,4 +52,5 @@ function updateHTML() {
 }
 
 newGame();
+hideEndGame();
 setDefaults();
