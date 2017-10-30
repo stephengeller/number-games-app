@@ -1,18 +1,21 @@
 <header>
   <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
 </header>
 
 <body>
+
+<div id="center">
   <div id="playerWelcome" class="player">
     Welcome <%= player %>!
   </div>
 
-  <div id="gameContainer">
+  <div id="gameContainer" class="gameContainer">
     <h2>
       I guess <span id="currentGuess"></span>
     </h2>
 
-    <div>
+    <div id="guesses">
       <span id="guessesLeft"></span> guesses left
     </div>
 
@@ -22,6 +25,14 @@
       <button id="correctGuess">Equal!</button>
     </div>
   </div>
+  <div id="endGame">
+    <span id="result"></span>
+  <button id="playAgain">Play again</button>
+  </div>
+</div>
+
+
+
 
   <script src="/js/numberGuesser.js"></script>
   <script src="/js/bootstrap-without-jquery.min.js"></script>

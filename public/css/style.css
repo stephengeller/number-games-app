@@ -1,0 +1,29 @@
+#currentGuess {
+	color: blue;
+	padding-bottom: 10%;
+}
+
+#guessesLeft {
+	color: red;
+}
+
+#guesses {
+	padding: 10px;
+}
+
+#playAgain {
+	margin: 10px;
+}
+
+.gameContainer {
+}
+
+#center {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+.player {
+	width: 20%;
+}

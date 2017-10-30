@@ -23,12 +23,23 @@ guessLower.addEventListener("click", function() {
 });
 
 correctGuess.addEventListener("click", function() {
-	gameContainer.innerHTML = "<h1> I win! </h1>";
+	result.innerHTML = "<h1> I win! </h1>";
+	endGame.style.display = "block";
+	gameContainer.style.display = "none";
+});
+
+playAgain.addEventListener("click", function() {
+	gameContainer.style.display = "block";
+	endGame.style.display = "none";
+	newGame();
+	setDefaults();
 });
 
 function checkIfWinner() {
 	if (game.guessesLeft <= 0) {
-		gameContainer.innerHTML = "<h1>YOU WIN!</h1>";
+		result.innerHTML = "<h1>YOU WIN!</h1>";
+		endGame.style.display = "block";
+		gameContainer.style.display = "none";
 	}
 }
 
