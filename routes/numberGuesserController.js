@@ -9,8 +9,7 @@ router.get("/", function(req, res, next) {
 		sess.player = "guest";
 	}
 	res.render("numberGuesser", {
-		player: sess.player,
-		game: sess.game
+		player: sess.player
 	});
 });
 

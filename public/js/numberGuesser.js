@@ -1,11 +1,11 @@
 var MAX = 1000;
+var GUESS_LIMIT = 5;
 
 class NumberGuesser {
-	constructor(range = MAX, guessLimit = 10) {
+	constructor(range = MAX, guessLimit = GUESS_LIMIT) {
 		this.max = range;
 		this.min = 1;
-		this.guessLimit = guessLimit;
-		this.guessesLeft = 10;
+		this.guessesLeft = guessLimit;
 		this.currentGuess;
 		this.range = this.max - this.min;
 		this.randomise();

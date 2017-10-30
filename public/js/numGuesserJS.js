@@ -23,7 +23,7 @@ guessLower.addEventListener("click", function() {
 });
 
 correctGuess.addEventListener("click", function() {
-	document.getElementById("currentGuess").innerHTML = "that I win!";
+	gameContainer.innerHTML = "<h1> I win! </h1>";
 });
 
 function checkIfWinner() {
@@ -33,8 +33,8 @@ function checkIfWinner() {
 }
 
 function updateHTML() {
-	document.getElementById("currentGuess").innerHTML = game.currentGuess;
-	document.getElementById("guessesLeft").innerHTML = game.guessesLeft;
+	currentGuess.innerHTML = game.currentGuess;
+	guessesLeft.innerHTML = game.guessesLeft;
 }
 
 newGame();
