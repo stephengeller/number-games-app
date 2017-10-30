@@ -13,6 +13,15 @@ body {
 
 #guesses {
 	padding: 10px;
+	font-size: 20px;
+}
+
+.guessOptions {
+	margin-top: 10px;
+}
+
+.guessOption {
+	margin: 10px;
 }
 
 #playAgain {
@@ -41,8 +50,18 @@ body {
 	align-items: center;
 }
 
+.currentGuess {
+	font-size: 50px;
+}
+
 .signupForm {
 	padding: 10px;
+}
+
+.nameInput {
+	height: 40px;
+	max-width: 300px;
+	text-align: center;
 }
 
 .player {

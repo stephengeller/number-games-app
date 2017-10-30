@@ -1,5 +1,5 @@
 var MAX = 1000;
-var GUESS_LIMIT = 7;
+var GUESS_LIMIT = 10;
 
 class NumberGuesser {
 	constructor(range = MAX, guessLimit = GUESS_LIMIT) {

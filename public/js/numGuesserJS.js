@@ -30,7 +30,7 @@ playAgain.addEventListener("click", function() {
 });
 
 function checkIfWinner() {
-	if (game.guessesLeft <= 0) {
+	if (game.guessesLeft < 0) {
 		result.innerHTML = "<h1>YOU WIN!</h1>";
 		hideGame();
 	}
