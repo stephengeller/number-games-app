@@ -23,7 +23,7 @@ class NumberGuesser {
 	}
 
 	addGuess() {
-		this.guesses += 1;
+		this.guessesLeft -= 1;
 	}
 
 	setRange() {
