@@ -18,10 +18,14 @@
 .gameContainer {
 }
 
-#center {
-	position: absolute;
+.center {
 	text-align: center;
 	width: 100%;
+	align-items: center;
+}
+
+.signupForm {
+	padding: 10px;
 }
 
 .player {
