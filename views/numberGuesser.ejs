@@ -1,0 +1,32 @@
+<body>
+  <div id="playerWelcome" class="player">
+    Welcome <%= player %>!
+  </div>
+
+  <div id="game">
+    <h2>
+      I guess <span id="currentGuess"></span>
+    </h2>
+
+    <div>
+      Max is <span id="maxNum"></span>
+    </div>
+
+    <div>
+      Min is <span id="minNum"></span>
+    </div>
+
+    <div>
+      <span id="guessesLeft"></span> guesses left
+    </div>
+
+    <div>
+      <button id="guessHigher">Higher!</button>
+      <button id="guessLower">Lower!</button>
+      <button id="correctGuess">Equal!</button>
+    </div>
+  </div>
+
+  <script src="/javascripts/numberGuesser.js"></script>
+  <script src="/javascripts/numGuesserJS.js"></script>
+</body>
