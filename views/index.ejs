@@ -1,11 +1,27 @@
-<% include partials/header %>
   <!DOCTYPE html>
   <html>
+  <head>
+
+
+
+    <title>Stephen's Number Games!</title>
+  </head>
 
   <body>
+    <div id="playerWelcome" class="player">
+      <% if (player != undefined) { %>
+        <h4>Welcome <%= player.name %>!</h4>
+        <h5>Score: <%= player.score %></h5>
+          <form action="/signout" method="post">
+            <button type="submit" class="btn button btn-primary signOut">Sign out</button>
+          </form>
+          <% } %>
+    </div>
+
+
     <div class="center">
-    <h1>Welcome to Stephen's Number Games!</h1>
-    <h3>Like the Hunger Games, but less violent</h3>
+      <h1>Welcome to Stephen's Number Games!</h1>
+      <h3>Like the Hunger Games, but less violent</h3>
 
     <% if(errors != undefined){ %>
         <% errors.forEach(function(error){ %>
@@ -22,6 +38,8 @@
     </div>
   </div>
 
+  <link href="/css/bootstrap-lumen.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
   </body>
 
   </html>

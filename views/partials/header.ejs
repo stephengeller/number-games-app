@@ -1,8 +1,27 @@
+<!DOCTYPE html>
+<html>
 <head>
   <%# <link href="/css/bootstrap.min.css" rel="stylesheet">%>
-  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-lumen.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
 
 
   <title>Stephen's Number Games!</title>
 </head>
+
+<body>
+
+  <div id="playerWelcome" class="player">
+    <% if (player != undefined) { %>
+      <h4>Welcome <%= player.name %>!</h4>
+      <h5>Score: <%= player.score %></h5>
+        <form action="/signout" method="post">
+          <button type="submit" class="btn button btn-primary signOut">Sign out</button>
+        </form>
+        <% } else { %>
+          <h4>Sign in to keep track of scores!</h4>
+          <form action="/">
+            <button type="submit" class="btn button btn-warning">Sign in</button>
+          </form>
+          <% } %>
+  </div>

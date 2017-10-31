@@ -1,31 +1,12 @@
 <% include ../partials/header %>
 
   <body>
-
-      <div id="playerWelcome" class="player">
-        <% if (player != undefined) { %>
-          Welcome
-          <%= player.name %>!
-            <form action="/signout" method="post">
-              <button type="submit" class="btn button">Sign out</button>
-            </form>
-            <% } else { %>
-              <form action="/">
-                <button type="submit" class="btn button">Sign in</button>
-              </form>
-              <% } %>
-      </div>
-
-
-      <div class="center">
-
+    <div class="center">
       <div id="gameContainer" class="gameContainer">
         <h2 class="currentGuess">I guess <span id="currentGuess"></span></h2>
-
         <div id="guesses" class="guesses">
           <span id="guessesLeft" class="guessesLeftNumber"></span> guesses left
         </div>
-
         <div class="guessOptions">
           <button id="guessLower" class="btn btn-warning guessOption">Lower!</button>
           <button id="correctGuess" class="btn btn-success guessOption">You got it!</button>
@@ -37,6 +18,8 @@
       </div>
       <button id="playAgain" class="btn btn-danger">Play again</button>
     </div>
+
+    <h5 class="backToGames gameScore">Current Game score: <span id="gameScore"></span></h5>
 
     <form action="/games" method="post">
       <button type="submit" class="btn btn-info button backToGames">Back to Games</button>

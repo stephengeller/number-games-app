@@ -5,6 +5,7 @@ var session = require("express-session");
 /* GET home page. */
 router.get("/", function(req, res) {
 	res.render("index", {
+		player: req.session.player,
 		errors: null
 	});
 });

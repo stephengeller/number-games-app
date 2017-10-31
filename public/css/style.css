@@ -58,6 +58,15 @@ body {
 	padding: 10px;
 }
 
+.signOut {
+	margin-top: 10px;
+}
+
+.gameScore {
+	margin-bottom: 2%;
+	text-align: center;
+}
+
 .nameInput {
 	height: 40px;
 	max-width: 300px;

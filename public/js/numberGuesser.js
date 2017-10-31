@@ -35,7 +35,7 @@ class NumberGuesser {
 
 	randomise(num = this.range) {
 		if (this.range > 1) {
-			var randomNum = Math.floor(Math.random() * num + 1);
+			var randomNum = Math.floor(Math.random() * num);
 			this.currentGuess = this.min + randomNum;
 		} else {
 			this.currentGuess = this.min;
