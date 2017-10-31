@@ -6,10 +6,10 @@ describe("NumberGuesser", function() {
 	});
 
 	describe("#constructor", function() {
-		it("default range of 1000", function() {
+		it("default values", function() {
 			expect(numberGuesser.max).toEqual(1000);
 			expect(numberGuesser.min).toEqual(1);
-			expect(numberGuesser.guessLimit).toEqual(10);
+			expect(numberGuesser.guessesLeft).toEqual(10);
 		});
 	});
 
@@ -18,12 +18,11 @@ describe("NumberGuesser", function() {
 			numberGuesser.currentGuess = 500;
 			numberGuesser.guessHigher();
 			expect(numberGuesser.max).toEqual(1000);
-			console.log(numberGuesser);
 			expect(numberGuesser.min >= 500).toBe(true);
 			expect(numberGuesser.currentGuess > 500).toBe(true);
 		});
 
-		it("raises the minimum guess to the initial guess", function() {
+		it("removes one guess", function() {
 			numberGuesser.currentGuess = 500;
 			numberGuesser.guessHigher();
 			expect(numberGuesser.guessesLeft).toEqual(9);
@@ -37,6 +36,12 @@ describe("NumberGuesser", function() {
 			expect(numberGuesser.min).toEqual(1);
 			expect(numberGuesser.max >= 500).toBe(true);
 			expect(numberGuesser.currentGuess < 500).toBe(true);
+		});
+
+		it("removes one guess", function() {
+			numberGuesser.currentGuess = 500;
+			numberGuesser.guessLower();
+			expect(numberGuesser.guessesLeft).toEqual(9);
 		});
 	});
 });
