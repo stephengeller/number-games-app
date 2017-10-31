@@ -1,0 +1,41 @@
+<% include ../partials/header %>
+
+  <body>
+    <div class="centerPickANumber">
+      <div id="gameContainer" class="gameContainer">
+        <h2 class="currentGuess">Guess my number...</h2>
+        <div id="guesses" class="guesses">
+          <span id="guessesLeft" id="guessesLeft" class="guessesLeftNumber"></span> guesses left
+        </div>
+        <div class="guessOptions" id="guessOptions">
+          <button id="1" class="btn btn-success pan-guessOption">1</button>
+          <button id="2" class="btn btn-success pan-guessOption">2</button>
+          <button id="3" class="btn btn-success pan-guessOption">3</button>
+          <button id="4" class="btn btn-success pan-guessOption">4</button>
+          <button id="5" class="btn btn-success pan-guessOption">5</button>
+          <button id="6" class="btn btn-success pan-guessOption">6</button>
+          <button id="7" class="btn btn-success pan-guessOption">7</button>
+          <button id="8" class="btn btn-success pan-guessOption">8</button>
+          <button id="9" class="btn btn-success pan-guessOption">9</button>
+          <button id="10" class="btn btn-success pan-guessOption">10</button>
+        </div>
+      </div>
+      <div id="endGame">
+        <span id="result"></span>
+      </div>
+      <button id="playAgain" class="btn btn-danger">Play again</button>
+    </div>
+
+    <h5 class="backToGames gameScore">Current Game score: <span id="gameScore"></span></h5>
+
+    <form action="/games" method="post">
+      <button type="submit" class="btn btn-info button backToGames">Back to Games</button>
+    </form>
+
+
+
+
+    <script src="/js/pickANumber.js"></script>
+    <script src="/js/bootstrap-without-jquery.min.js"></script>
+    <script src="/js/pickANumberJS.js"></script>
+  </body>

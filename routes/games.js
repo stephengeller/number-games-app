@@ -29,4 +29,16 @@ router.post("/numberGuesser", function(req, res, next) {
 	});
 });
 
+router.get("/pickanumber", function(req, res, next) {
+	res.render("game/pickANumber", {
+		player: req.session.player
+	});
+});
+
+router.post("/pickanumber", function(req, res, next) {
+	res.render("game/pickANumber", {
+		player: req.session.player
+	});
+});
+
 module.exports = router;

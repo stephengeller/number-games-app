@@ -1,8 +1,6 @@
-var GUESS_LIMIT = 10;
-
 class NumberPicker {
-	constructor(guessLimit = GUESS_LIMIT) {
-		this.guessLimit = guessLimit;
+	constructor(guessLimit = 5) {
+		this.guessesLeft = guessLimit;
 		this.randNum;
 	}
 
@@ -10,6 +8,10 @@ class NumberPicker {
 		this.randNum = Math.floor(Math.random() * 10);
 		return this.randNum;
 	}
+
+	wrongGuess() {
+		this.guessesLeft--;
+	}
 }
 
-game = new NumberGuesser();
+game = new NumberPicker();
