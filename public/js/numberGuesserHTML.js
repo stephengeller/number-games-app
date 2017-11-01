@@ -1,11 +1,5 @@
-var score = 0;
-
 function newGame() {
 	game = new NumberGuesser();
-}
-
-function setDefaults() {
-	updateHTML();
 }
 
 guessHigher.addEventListener("click", function() {
@@ -21,9 +15,9 @@ guessLower.addEventListener("click", function() {
 });
 
 correctGuess.addEventListener("click", function() {
-	result.innerHTML = "<h1> I win! </h1>";
+	result.innerHTML = "<h1>I win!</h1>";
 	hideGame();
-	loseGame();
+	manager.loseGame();
 });
 
 playAgain.addEventListener("click", function() {
@@ -33,7 +27,7 @@ playAgain.addEventListener("click", function() {
 });
 
 startGame.addEventListener('click', function() {
-	hideIntro()
+	hideIntro();
 	hideEndGame()
 });
 
@@ -42,28 +36,11 @@ function hideIntro() {
 	playAgain.style.display = "inline-block"
 }
 
-function loseGame() {
-	score--;
-	updateScore(-1)
-}
-
-function winGame() {
-	score++;
-	updateScore(1)
-}
-
-function updateScore(point) {
-    gameScore.innerHTML = score;
-    currentScore = parseInt(playerScore.innerHTML);
-    playerScore.innerHTML = currentScore + point;
-    playerScoreHidden.value = playerScore.innerHTML
-}
-
 function checkIfWinner() {
 	if (game.guessesLeft < 0) {
 		result.innerHTML = "<h1>YOU WIN!</h1>";
 		hideGame();
-		winGame();
+		manager.winGame();
 	}
 }
 
@@ -72,7 +49,6 @@ function showIntro() {
     gameContainer.style.display = "none";
     endGame.style.display = "none";
     playAgain.style.display = "none";
-    console.log('hello!')
 }
 
 function hideGame() {
@@ -88,17 +64,24 @@ function hideEndGame() {
 function updateHTML() {
 	currentGuess.innerHTML = game.currentGuess;
 	guessesLeft.innerHTML = game.guessesLeft;
-    // if (gameScore !== undefined) {
-    //     gameScore.innerHTML = score;
-    // }
+}
+
+function setupManager() {
+    if (typeof playerScore !== 'undefined') {
+        var playerScore = parseInt(playerScore.innerHTML);
+        manager = new NumberGuesserManager(playerScore);
+    } else {
+        manager = new NumberGuesserManager(0)
+    }
 }
 
 function setup() {
+	setupManager();
     newGame();
     hideEndGame();
     setDefaults();
     showIntro();
 }
 
-setup()
+setup();
 

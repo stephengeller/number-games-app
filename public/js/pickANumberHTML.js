@@ -61,9 +61,11 @@ function checkIfWinner(number) {
 
 function updateScore(point) {
     gameScore.innerHTML = score;
-    currentScore = parseInt(playerScore.innerHTML);
-    playerScore.innerHTML = currentScore + point;
-    playerScoreHidden.value = playerScore.innerHTML
+    if (typeof playerScore != 'undefined') {
+        currentScore = parseInt(playerScore.innerHTML);
+        playerScore.innerHTML = currentScore + point;
+        playerScoreHidden.value = playerScore.innerHTML
+	}
 }
 
 function wrongGuess(number) {
