@@ -69,10 +69,14 @@ function checkIfWinner(number) {
 function wrongGuess(number) {
 	game.wrongGuess();
     document.getElementById(number).style.display = "none";
+	promptWrongGuess()
+}
+
+function promptWrongGuess() {
     guessPrompt.innerHTML = "Wrong!";
     var colours = ["red", "blue", "green", "orange", "navy", "pink"];
     var rand = colours[Math.floor(Math.random() * colours.length)];
-	guessPrompt.style.color = rand
+    guessPrompt.style.color = rand
 }
 
 function hideGame() {

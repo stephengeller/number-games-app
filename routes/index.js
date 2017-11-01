@@ -30,7 +30,7 @@ router.post("/confirm-user", function(req, res) {
 	if (errors.length !== 0) {
 		res.render("index", {
 			errors: errors,
-			player: undefined
+			player: req.session.player
 		});
 	} else {
 		req.session.player = {

@@ -13,7 +13,6 @@ router.get("/", function(req, res) {
 router.post("/", function(req, res) {
 	var lastGameScore = parseInt(req.body.playerScoreHidden);
 	if ((isNaN(lastGameScore) === false)  && req.session.player !== undefined) {
-		console.log(lastGameScore);
         req.session.player.score = lastGameScore
     }
 	res.render("game/index", {

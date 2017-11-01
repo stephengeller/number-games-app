@@ -9,7 +9,6 @@ describe("NumberGuesser", function() {
 		it("default values", function() {
 			expect(numberGuesser.max).toEqual(1000);
 			expect(numberGuesser.min).toEqual(1);
-			expect(numberGuesser.guessesLeft).toEqual(10);
 		});
 	});
 
@@ -23,9 +22,11 @@ describe("NumberGuesser", function() {
 		});
 
 		it("removes one guess", function() {
-			numberGuesser.currentGuess = 500;
-			numberGuesser.guessHigher();
-			expect(numberGuesser.guessesLeft).toEqual(9);
+            var guess1 = numberGuesser.guessesLeft;
+            numberGuesser.currentGuess = 500;
+            numberGuesser.guessHigher();
+            var guess2 = numberGuesser.guessesLeft;
+            expect(guess2 < guess1).toBe(true);
 		});
 	});
 
@@ -39,9 +40,11 @@ describe("NumberGuesser", function() {
 		});
 
 		it("removes one guess", function() {
+			var guess1 = numberGuesser.guessesLeft;
 			numberGuesser.currentGuess = 500;
 			numberGuesser.guessLower();
-			expect(numberGuesser.guessesLeft).toEqual(9);
+            var guess2 = numberGuesser.guessesLeft;
+            expect(guess2 < guess1).toBe(true);
 		});
 	});
 });
