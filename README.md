@@ -1,4 +1,4 @@
-# The Number Games!
+# Welcome to The Number Games!
 
 Simple maths games! Keep your scores! Beat your friends!
 
@@ -24,11 +24,11 @@ How to Test
 All tests are viewable through the SpecRunner.html file. Run `open SpecRunner.html` in your command line to open it in the browser.
 
 
-##Comments
+## Comments
 All our pages are rendered using ejs files in the views folder, splitting up the header and footers into separate ejs files in the partials folder.
 Each game is a single-page app, with the javascript files loaded at the bottom of the ejs files.
 
-####Future steps
+#### Future steps
   - Add database persistence for users
   - Validate users so they can sign in / sign up
   - Add more games
