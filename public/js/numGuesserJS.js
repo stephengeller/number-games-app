@@ -35,11 +35,13 @@ playAgain.addEventListener("click", function() {
 function loseGame() {
 	score--;
 	gameScore.innerHTML = score;
+    playerScore.innerHTML = parseInt(playerScore.innerHTML) - 1;
 }
 
 function winGame() {
 	score++;
 	gameScore.innerHTML = score;
+    playerScore.innerHTML = parseInt(playerScore.innerHTML) + 1;
 }
 
 function checkIfWinner() {

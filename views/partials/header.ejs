@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%# <link href="/css/bootstrap.min.css" rel="stylesheet">%>
   <link href="/css/bootstrap-lumen.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
-
-
   <title>Stephen's Number Games!</title>
 </head>
 
@@ -14,7 +11,7 @@
   <div id="playerWelcome" class="player">
     <% if (player != undefined) { %>
       <h4>Welcome <%= player.name %>!</h4>
-      <h5>Score: <%= player.score %></h5>
+      <h5>Score: <span id="playerScore"><%= player.score %></span></h5>
         <form action="/signout" method="post">
           <button type="submit" class="btn button btn-primary signOut">Sign out</button>
         </form>
