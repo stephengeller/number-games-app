@@ -25,17 +25,11 @@
       </div>
       <button id="playAgain" class="btn btn-danger">Play again</button>
     </div>
-
-    <h5 class="backToGames gameScore">Current Game score: <span id="gameScore"></span></h5>
-
-    <form action="/games" method="post">
-      <button type="submit" class="btn btn-info button backToGames">Back to Games</button>
-    </form>
-
-
+    <% include ../partials/gameFooter %>
 
 
     <script src="/js/pickANumber.js"></script>
     <script src="/js/bootstrap-without-jquery.min.js"></script>
     <script src="/js/pickANumberJS.js"></script>
   </body>
+
