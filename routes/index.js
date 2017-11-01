@@ -29,7 +29,8 @@ router.post("/confirm-user", function(req, res) {
 
 	if (errors.length !== 0) {
 		res.render("index", {
-			errors: errors
+			errors: errors,
+			player: undefined
 		});
 	} else {
 		req.session.player = {

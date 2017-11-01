@@ -13,10 +13,9 @@ function setDefaults() {
 function restoreButtons() {
 	for (i = 1; i < 11; i++) {
 		i = i.toString();
-		console.log(i.toString());
 		console.log(document.getElementById(i));
-		document.getElementById(i).style.visibility = "visible";
-	}
+        document.getElementById(i).style.display = "inline-block";
+    }
 }
 
 guessOptions.addEventListener("click", function(e) {
@@ -39,9 +38,9 @@ function loseGame() {
 }
 
 function winGame() {
-	result.innerHTML = "<h1>YOU WIN!</h1>";
+    score++;
+    result.innerHTML = "<h1>YOU WIN!</h1>";
 	hideGame();
-	score++;
 	updateScore(1)
 }
 
@@ -66,8 +65,7 @@ function updateScore(point) {
 
 function wrongGuess(number) {
 	game.wrongGuess();
-    document.getElementById(number).classList.add("hide-me");
-    // document.getElementById(number).style.visibility = "hidden";
+    document.getElementById(number).style.display = "none";
 }
 
 function hideGame() {
