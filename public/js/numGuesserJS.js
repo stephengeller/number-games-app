@@ -32,6 +32,16 @@ playAgain.addEventListener("click", function() {
 	setDefaults();
 });
 
+startGame.addEventListener('click', function() {
+	hideIntro()
+	hideEndGame()
+});
+
+function hideIntro() {
+	intro.style.display = "none";
+	playAgain.style.display = "inline-block"
+}
+
 function loseGame() {
 	score--;
 	updateScore(-1)
@@ -57,6 +67,14 @@ function checkIfWinner() {
 	}
 }
 
+function showIntro() {
+	intro.style.display = "block";
+    gameContainer.style.display = "none";
+    endGame.style.display = "none";
+    playAgain.style.display = "none";
+    console.log('hello!')
+}
+
 function hideGame() {
 	endGame.style.display = "block";
 	gameContainer.style.display = "none";
@@ -70,9 +88,17 @@ function hideEndGame() {
 function updateHTML() {
 	currentGuess.innerHTML = game.currentGuess;
 	guessesLeft.innerHTML = game.guessesLeft;
-	gameScore.innerHTML = score;
+    // if (gameScore !== undefined) {
+    //     gameScore.innerHTML = score;
+    // }
 }
 
-newGame();
-hideEndGame();
-setDefaults();
+function setup() {
+    newGame();
+    hideEndGame();
+    setDefaults();
+    showIntro();
+}
+
+setup()
+

@@ -3,6 +3,8 @@ var score = 0;
 function newGame() {
 	game = new NumberPicker();
 	game.randomise();
+    guessPrompt.innerHTML = "Guess my number...";
+    guessPrompt.style.color = "black";
 }
 
 function setDefaults() {
@@ -13,7 +15,6 @@ function setDefaults() {
 function restoreButtons() {
 	for (i = 1; i < 11; i++) {
 		i = i.toString();
-		console.log(document.getElementById(i));
         document.getElementById(i).style.display = "inline-block";
     }
 }
@@ -32,14 +33,16 @@ playAgain.addEventListener("click", function() {
 
 function loseGame() {
 	score--;
-	result.innerHTML = "<h1>YOU LOSE!</h1>";
+    result.innerHTML = "<h1>My number was " + game.randNum + "!</h1>";
+    result.innerHTML += "<h1>YOU LOSE!</h1>";
 	hideGame();
 	updateScore(-1)
 }
 
 function winGame() {
     score++;
-    result.innerHTML = "<h1>YOU WIN!</h1>";
+    result.innerHTML = "<h1>My number was " + game.randNum + "!</h1>";
+    result.innerHTML += "<h1>YOU WIN!</h1>";
 	hideGame();
 	updateScore(1)
 }
@@ -66,6 +69,10 @@ function updateScore(point) {
 function wrongGuess(number) {
 	game.wrongGuess();
     document.getElementById(number).style.display = "none";
+    guessPrompt.innerHTML = "Wrong!";
+    var colours = ["red", "blue", "green", "orange", "navy", "pink"];
+    var rand = colours[Math.floor(Math.random() * colours.length)];
+	guessPrompt.style.color = rand
 }
 
 function hideGame() {
