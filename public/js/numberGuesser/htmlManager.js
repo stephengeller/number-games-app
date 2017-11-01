@@ -23,7 +23,7 @@ correctGuess.addEventListener("click", function() {
 playAgain.addEventListener("click", function() {
 	hideEndGame();
 	newGame();
-	setDefaults();
+	updateHTML();
 });
 
 startGame.addEventListener('click', function() {
@@ -79,7 +79,7 @@ function setup() {
 	setupManager();
     newGame();
     hideEndGame();
-    setDefaults();
+    updateHTML();
     showIntro();
 }
 

@@ -7,6 +7,15 @@ function newGame() {
     guessPrompt.style.color = "black";
 }
 
+function setupManager() {
+    if (typeof playerScore !== 'undefined') {
+        var playerScore = parseInt(playerScore.innerHTML);
+        manager = new pickANumberManager(playerScore);
+    } else {
+        manager = new pickANumberManager(0)
+    }
+}
+
 function setDefaults() {
 	restoreButtons();
 	updateHTML();
@@ -32,19 +41,17 @@ playAgain.addEventListener("click", function() {
 });
 
 function loseGame() {
-	score--;
+	manager.loseGame();
     result.innerHTML = "<h1>My number was " + game.randNum + "!</h1>";
     result.innerHTML += "<h1>YOU LOSE!</h1>";
 	hideGame();
-	updateScore(-1)
 }
 
 function winGame() {
-    score++;
+    manager.winGame();
     result.innerHTML = "<h1>My number was " + game.randNum + "!</h1>";
     result.innerHTML += "<h1>YOU WIN!</h1>";
 	hideGame();
-	updateScore(1)
 }
 
 function checkIfWinner(number) {
@@ -56,15 +63,6 @@ function checkIfWinner(number) {
 	} else {
 		wrongGuess(number);
 		updateHTML();
-	}
-}
-
-function updateScore(point) {
-    gameScore.innerHTML = score;
-    if (typeof playerScore != 'undefined') {
-        currentScore = parseInt(playerScore.innerHTML);
-        playerScore.innerHTML = currentScore + point;
-        playerScoreHidden.value = playerScore.innerHTML
 	}
 }
 
@@ -89,9 +87,16 @@ function hideEndGame() {
 
 function updateHTML() {
 	guessesLeft.innerHTML = game.guessesLeft;
-	gameScore.innerHTML = score;
+	gameScore.innerHTML = manager.currentGameScore;
 }
 
-newGame();
-hideEndGame();
-setDefaults();
+
+function setup() {
+	setupManager();
+    newGame();
+    hideEndGame();
+    setDefaults();
+}
+
+setup();
+

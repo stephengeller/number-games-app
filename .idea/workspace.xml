@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b3f6dee-2809-4df5-8c59-bd6fda1c3ce2" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/numGuesserJS.js" afterPath="$PROJECT_DIR$/public/js/numberGuesserHTML.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/pickANumberJS.js" afterPath="$PROJECT_DIR$/public/js/pickANumberHTML.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/numberGuesser.js" afterPath="$PROJECT_DIR$/public/js/numberGuesser/game.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/numberGuesserHTML.js" afterPath="$PROJECT_DIR$/public/js/numberGuesser/htmlManager.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/numberGuesserManager.js" afterPath="$PROJECT_DIR$/public/js/numberGuesser/pointsManager.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/pickANumber.js" afterPath="$PROJECT_DIR$/public/js/pickANumber/game.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/pickANumberHTML.js" afterPath="$PROJECT_DIR$/public/js/pickANumber/htmlManager.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/pickANumberManager.js" afterPath="$PROJECT_DIR$/public/js/pickANumber/pointsManager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/pickANumber.js" afterPath="$PROJECT_DIR$/public/js/pickANumber.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpecRunner.html" afterPath="$PROJECT_DIR$/SpecRunner.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/game/numberGuesser.ejs" afterPath="$PROJECT_DIR$/views/game/numberGuesser.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/game/pickANumber.ejs" afterPath="$PROJECT_DIR$/views/game/pickANumber.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/gameFooter.ejs" afterPath="$PROJECT_DIR$/views/partials/gameFooter.ejs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,96 +22,18 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="pickANumberHTML.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/js/pickANumberHTML.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="213">
-                  <caret line="63" column="28" lean-forward="false" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="numberGuesser.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/js/numberGuesser.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="233">
-                  <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="numberGuesserHTML.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/js/numberGuesserHTML.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="numberGuesser.ejs" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/views/game/numberGuesser.ejs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="pickANumber.ejs" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/views/game/pickANumber.ejs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="465">
-                  <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="pickANumber.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/public/js/pickANumber.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="numberGuesserManager.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/public/js/numberGuesserManager.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="gameFooter.ejs" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/views/partials/gameFooter.ejs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="htmlManager.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/numberGuesser/htmlManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -117,8 +42,15 @@
       <find>updateScore</find>
       <find>upd</find>
       <find>updateSCore</find>
+      <find>setDefaults</find>
       <find>console</find>
+      <find>loseGame</find>
+      <find>gameScore</find>
+      <find>console.</find>
     </findStrings>
+    <replaceStrings>
+      <replace>updateHTML</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -135,13 +67,19 @@
         <option value="$PROJECT_DIR$/public/js/pickANumberJS.js" />
         <option value="$PROJECT_DIR$/public/js/gameManager.js" />
         <option value="$PROJECT_DIR$/views/partials/gameFooter.ejs" />
-        <option value="$PROJECT_DIR$/public/js/numberGuesserManager.js" />
         <option value="$PROJECT_DIR$/public/js/numGuesserJS.js" />
         <option value="$PROJECT_DIR$/public/js/numGuesserHTML.js" />
-        <option value="$PROJECT_DIR$/views/game/numberGuesser.ejs" />
-        <option value="$PROJECT_DIR$/views/game/pickANumber.ejs" />
         <option value="$PROJECT_DIR$/public/js/pickANumberHTML.js" />
         <option value="$PROJECT_DIR$/public/js/pickANumber.js" />
+        <option value="$PROJECT_DIR$/public/js/numberGuesserManager.js" />
+        <option value="$PROJECT_DIR$/public/js/numberGuesserHTML.js" />
+        <option value="$PROJECT_DIR$/public/js/pickANumber/pointsManager.js" />
+        <option value="$PROJECT_DIR$/public/js/numberGuesser/pointsManager.js" />
+        <option value="$PROJECT_DIR$/views/game/pickANumber.ejs" />
+        <option value="$PROJECT_DIR$/public/js/pickANumber/game.js" />
+        <option value="$PROJECT_DIR$/public/js/pickANumber/htmlManager.js" />
+        <option value="$PROJECT_DIR$/views/game/numberGuesser.ejs" />
+        <option value="$PROJECT_DIR$/public/js/numberGuesser/htmlManager.js" />
       </list>
     </option>
   </component>
@@ -288,6 +226,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="number-game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="number-game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pickANumber" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="number-game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="number-game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="numberGuesser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -296,6 +278,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/js/numberGuesser" />
+      <recent name="$PROJECT_DIR$/public/js/pickANumber" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -455,12 +443,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1509540303531</updated>
-      <workItem from="1509540304657" duration="9771000" />
+      <workItem from="1509540304657" duration="11374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9771000" />
+    <option name="totallyTimeSpent" value="11374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="373" y="23" width="1307" height="1022" extended-state="0" />
@@ -494,7 +482,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -558,14 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/numberGuesser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/partials/gameFooter.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -574,18 +554,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/numberGuesserManager.js">
+    <entry file="file://$PROJECT_DIR$/views/game/numberGuesser.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/game/numberGuesser.ejs">
+    <entry file="file://$PROJECT_DIR$/public/js/numberGuesser/pointsManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        <state relative-caret-position="105">
+          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/pickANumber/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -593,31 +581,39 @@
     <entry file="file://$PROJECT_DIR$/views/game/pickANumber.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+          <caret line="31" column="46" lean-forward="false" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/numberGuesserHTML.js">
+    <entry file="file://$PROJECT_DIR$/public/js/numberGuesser/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        <state relative-caret-position="233">
+          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/pickANumberHTML.js">
+    <entry file="file://$PROJECT_DIR$/public/js/pickANumber/htmlManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="63" column="28" lean-forward="false" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+        <state relative-caret-position="387">
+          <caret line="89" column="50" lean-forward="false" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/pickANumber.js">
+    <entry file="file://$PROJECT_DIR$/public/js/pickANumber/pointsManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/numberGuesser/htmlManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
           <folding />
         </state>
       </provider>

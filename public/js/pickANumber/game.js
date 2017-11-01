@@ -5,7 +5,7 @@ class NumberPicker {
 	}
 
 	randomise() {
-		this.randNum = Math.floor(Math.random() * 10 + 1);
+		this.randNum = (Math.floor(Math.random() * 10 )+ 1);
 		return this.randNum;
 	}
 

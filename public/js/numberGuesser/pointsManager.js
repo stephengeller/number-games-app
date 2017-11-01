@@ -5,16 +5,12 @@ class NumberGuesserManager {
     }
 
     winGame() {
-        console.log(this.currentGameScore);
         this.currentGameScore += 1;
-        console.log(this.currentGameScore);
         this.updateScore(1);
     }
 
     loseGame() {
-        console.log(this.currentGameScore);
         this.currentGameScore -= 1;
-        console.log(this.currentGameScore);
         this.updateScore(-1);
     }
 
@@ -27,5 +23,3 @@ class NumberGuesserManager {
         }
     }
 }
-
-console.log('number guesser ');
