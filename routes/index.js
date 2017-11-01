@@ -32,7 +32,6 @@ router.post("/confirm-user", function(req, res) {
 			errors: errors
 		});
 	} else {
-		console.log(req.body.name);
 		req.session.player = {
 			name: req.body.name,
 			score: 0

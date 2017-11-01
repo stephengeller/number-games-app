@@ -34,14 +34,19 @@ playAgain.addEventListener("click", function() {
 
 function loseGame() {
 	score--;
-	gameScore.innerHTML = score;
-    playerScore.innerHTML = parseInt(playerScore.innerHTML) - 1;
+	updateScore(-1)
 }
 
 function winGame() {
 	score++;
-	gameScore.innerHTML = score;
-    playerScore.innerHTML = parseInt(playerScore.innerHTML) + 1;
+	updateScore(1)
+}
+
+function updateScore(point) {
+    gameScore.innerHTML = score;
+    currentScore = parseInt(playerScore.innerHTML);
+    playerScore.innerHTML = currentScore + point;
+    playerScoreHidden.value = playerScore.innerHTML
 }
 
 function checkIfWinner() {

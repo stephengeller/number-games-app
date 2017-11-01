@@ -11,7 +11,10 @@ router.get("/", function(req, res) {
 });
 
 router.post("/", function(req, res) {
-	console.log(req.session.player);
+	var lastGameScore = req.body.playerScoreHidden;
+	if (lastGameScore != undefined && req.session.player != undefined) {
+        req.session.player.score = parseInt(lastGameScore)
+    }
 	res.render("game/index", {
 		player: req.session.player
 	});

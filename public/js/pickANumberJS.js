@@ -25,12 +25,6 @@ guessOptions.addEventListener("click", function(e) {
 	}
 });
 
-// correctGuess.addEventListener("click", function() {
-// 	result.innerHTML = "<h1> I win! </h1>";
-// 	hideGame();
-// 	loseGame();
-// });
-
 playAgain.addEventListener("click", function() {
 	hideEndGame();
 	newGame();
@@ -41,14 +35,14 @@ function loseGame() {
 	score--;
 	result.innerHTML = "<h1>YOU LOSE!</h1>";
 	hideGame();
-	gameScore.innerHTML = score;
+	updateScore(-1)
 }
 
 function winGame() {
 	result.innerHTML = "<h1>YOU WIN!</h1>";
 	hideGame();
 	score++;
-	gameScore.innerHTML = score;
+	updateScore(1)
 }
 
 function checkIfWinner(number) {
@@ -61,6 +55,13 @@ function checkIfWinner(number) {
 		wrongGuess(number);
 		updateHTML();
 	}
+}
+
+function updateScore(point) {
+    gameScore.innerHTML = score;
+    currentScore = parseInt(playerScore.innerHTML);
+    playerScore.innerHTML = currentScore + point;
+    playerScoreHidden.value = playerScore.innerHTML
 }
 
 function wrongGuess(number) {
