@@ -15,7 +15,7 @@ function restoreButtons() {
 		i = i.toString();
 		console.log(i.toString());
 		console.log(document.getElementById(i));
-		document.getElementById(i).style.display = "inline-block";
+		document.getElementById(i).style.visibility = "visible";
 	}
 }
 
@@ -66,7 +66,8 @@ function updateScore(point) {
 
 function wrongGuess(number) {
 	game.wrongGuess();
-	document.getElementById(number).style.display = "none";
+    document.getElementById(number).classList.add("hide-me");
+    // document.getElementById(number).style.visibility = "hidden";
 }
 
 function hideGame() {

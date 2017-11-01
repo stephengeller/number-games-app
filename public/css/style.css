@@ -11,6 +11,12 @@ body {
 	color: red;
 }
 
+.hide-me {
+	visibility: hidden;
+	opacity: 0;
+	transform: scale(.75);
+}
+
 #guesses {
 	padding: 10px;
 	font-size: 20px;
@@ -22,12 +28,11 @@ body {
 
 .guessOption {
 	margin: 10px;
-	-webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
-	transition: width 2s;
 }
 
 .pan-guessOption {
 	margin: 2px;
+	transition: opacity .4s ease-out, transform .4s ease-out, visibility .4s ease-out;
 }
 
 #playAgain {
