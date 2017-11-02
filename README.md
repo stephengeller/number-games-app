@@ -10,7 +10,7 @@ Simple maths games! Keep your scores! Beat your friends!
 How to Install
 -----
 
-You can play it [online!](https://number-games.herokuapp.com)
+You can now play it [on my website!](https://stephengeller.co.uk/games)
 
 Clone this repository, install the packages, run the server in your terminal and access it on the browser.
 ````

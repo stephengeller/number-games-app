@@ -7,6 +7,59 @@
 
   <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.8.0/jasmine_favicon.png">
   <link rel="stylesheet" href="lib/jasmine-2.8.0/jasmine.css">
+</head>
+
+
+<body>
+  <div class="center" id="numberGame">
+    <div id="intro">
+      <h2>Think of a number between 1 and 1000, and I'll guess it!</h2>
+      <button class="btn btn-info" id="startGame">Start</button>
+    </div>
+    <div id="gameContainer" class="gameContainer">
+      <h2 class="currentGuess">I guess <span id="currentGuess"></span></h2>
+      <div id="guesses" class="guesses">
+        <span id="guessesLeft" class="guessesLeftNumber"></span> guesses left
+      </div>
+      <div class="guessOptions">
+        <button id="guessLower" class="btn btn-warning guessOption">Lower!</button>
+        <button id="correctGuess" class="btn btn-success guessOption">You got it!</button>
+        <button id="guessHigher" class="btn btn-primary guessOption">Higher!</button>
+      </div>
+    </div>
+    <div id="endGame">
+      <span id="result"></span>
+    </div>
+    <button id="playAgain" class="btn btn-danger">Play again</button>
+  </div>
+
+  <div class="centerPickANumber" id="pickANumber">
+    <div id="gameContainer" class="gameContainer">
+      <h2 class="currentGuess" id="guessPrompt">Guess my number...</h2>
+      <div id="guesses" class="guesses">
+        <span id="guessesLeft" id="guessesLeft" class="guessesLeftNumber"></span> guesses left
+      </div>
+      <div class="guessOptions" id="guessOptions">
+        <button id="1" class="btn btn-success pan-guessOption">1</button>
+        <button id="2" class="btn btn-success pan-guessOption">2</button>
+        <button id="3" class="btn btn-success pan-guessOption">3</button>
+        <button id="4" class="btn btn-success pan-guessOption">4</button>
+        <button id="5" class="btn btn-success pan-guessOption">5</button>
+        <button id="6" class="btn btn-success pan-guessOption">6</button>
+        <button id="7" class="btn btn-success pan-guessOption">7</button>
+        <button id="8" class="btn btn-success pan-guessOption">8</button>
+        <button id="9" class="btn btn-success pan-guessOption">9</button>
+        <button id="10" class="btn btn-success pan-guessOption">10</button>
+      </div>
+    </div>
+    <div id="endGame">
+      <span id="result"></span>
+    </div>
+    <button id="playAgain" class="btn btn-danger">Play again</button>
+  </div>
+
+
+
 
   <script src="lib/jasmine-2.8.0/jasmine.js"></script>
   <script src="lib/jasmine-2.8.0/jasmine-html.js"></script>
@@ -14,16 +67,15 @@
 
   <!-- include source files here... -->
   <script src="public/js/numberGuesser/game.js"></script>
+  <script src="public/js/numberGuesser/pointsManager.js"></script>
+  <script src="public/js/numberGuesser/htmlManager.js"></script>
   <script src="public/js/pickANumber/game.js"></script>
 
   <!-- include spec files here... -->
   <script src="spec/SpecHelper.js"></script>
   <script src="spec/numberGuesserSpec.js"></script>
   <script src="spec/pickANumberSpec.js"></script>
-
-</head>
-
-<body>
+  <script src="spec/featureSpec.js"></script>
 </body>
 
 </html>

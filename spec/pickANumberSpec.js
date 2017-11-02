@@ -12,7 +12,6 @@ describe("numberPicker", function() {
 			var a = numberPicker.randomise();
 			var b = numberPicker.randomise();
 			var c = numberPicker.randomise();
-			console.log(a + " " + b + " " + c);
 			// This may fail once in a blue moon!
 			expect(a != b || b != c || c != a).toBe(true);
 		});

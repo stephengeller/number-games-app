@@ -14,7 +14,7 @@ body {
 .hide-me {
 	visibility: hidden;
 	opacity: 0;
-	transform: scale(.75);
+	transform: scale(0.75);
 }
 
 #guesses {
@@ -32,14 +32,12 @@ body {
 
 .pan-guessOption {
 	margin: 2px;
-	transition: opacity .4s ease-out, transform .4s ease-out, visibility .4s ease-out;
+	transition: opacity 0.4s ease-out, transform 0.4s ease-out,
+		visibility 0.4s ease-out;
 }
 
 #playAgain {
 	margin-top: 20px;
-}
-
-.gameContainer {
 }
 
 .gameButtons {
