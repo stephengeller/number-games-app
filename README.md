@@ -28,7 +28,7 @@ All tests are viewable through the SpecRunner.html file. Run `open SpecRunner.ht
 
 
 ## Comments
-All our pages are rendered using ejs files in the views folder, splitting up the header and footers into separate ejs files in the partials folder.
+All pages are rendered using ejs files in the views folder, splitting up the header and footers into separate ejs files in the partials folder.
 Each game is a single-page app, with the javascript files loaded at the bottom of the ejs files.
 
 #### Future steps

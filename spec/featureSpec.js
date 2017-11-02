@@ -10,7 +10,7 @@ describe("feature", function() {
 	});
 
 	describe("Pick a Number game", function() {
-		it("plays the game", function() {
+		it("contains starting prompt", function() {
 			expect(document.getElementById("guessPrompt").innerHTML).toEqual(
 				"Guess my number..."
 			);
