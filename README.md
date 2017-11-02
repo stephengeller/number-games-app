@@ -9,10 +9,13 @@ Simple maths games! Keep your scores! Beat your friends!
 
 How to Install
 -----
+
+You can play it [online!](https://number-games.herokuapp.com)
+
 Clone this repository, install the packages, run the server in your terminal and access it on the browser.
 ````
 $ git clone git@github.com:stephengeller/number-games-app.git
-$ cd number-games-app 
+$ cd number-games-app
 $ npm install
 $ npm start
 ````
